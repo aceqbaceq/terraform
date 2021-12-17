@@ -114,7 +114,7 @@ resource "aws_instance" "app_server" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.elk.id}"]
   subnet_id              = aws_subnet.elk-eu-1a.id
-  key_name               = "a.krivosheev"
+  key_name               = "sidorov"
 
   root_block_device {
     volume_size           = 25
@@ -134,7 +134,7 @@ resource "aws_instance" "elk1-fra1-terraform" {
   vpc_security_group_ids      = ["${aws_security_group.elk.id}"]
   subnet_id                   = aws_subnet.elk-eu-1a.id
   associate_public_ip_address = "true"
-  key_name                    = "a.krivosheev"
+  key_name                    = "sidorov"
 
   root_block_device {
     volume_size           = 50
@@ -155,7 +155,7 @@ resource "aws_instance" "elk2-fra2-terraform" {
   vpc_security_group_ids      = ["${aws_security_group.elk.id}"]
   subnet_id                   = aws_subnet.elk-eu-1b.id
   associate_public_ip_address = "true"
-  key_name                    = "a.krivosheev"
+  key_name                    = "sidorov"
 
   root_block_device {
     volume_size           = 50
@@ -261,7 +261,7 @@ resource "aws_instance" "kub-fra1-terraform" {
   vpc_security_group_ids      = ["${aws_security_group.kub.id}"]
   subnet_id                   = aws_subnet.kub-eu-1a.id
   associate_public_ip_address = "true"
-  key_name                    = "a.krivosheev"
+  key_name                    = "sidorov"
 
   root_block_device {
     volume_size           = 50

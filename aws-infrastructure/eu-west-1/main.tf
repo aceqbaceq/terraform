@@ -32,7 +32,7 @@ resource "aws_instance" "test-ire1-1-terraform" {
   vpc_security_group_ids      = ["sg-023376e6af28fb671"]
   subnet_id                   = "subnet-0c1ae7907d4a4c484"
   associate_public_ip_address = "true"
-  key_name                    = "a.krivosheev"
+  key_name                    = "sudorov"
 
   root_block_device {
     volume_size           = 10
